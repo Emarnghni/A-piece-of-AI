@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "IranYekan";
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 300ms ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #f3f2f4;
+}
+
+.wrapper.open {
+  grid-template-rows: 1fr;
+  z-index: 10;
+}
+
+.wrapper.open .expandable {
+  padding: 32px;
+}
+
+.expandable {
+  background-color: #18151F;
+  min-height: 0;
+  display: flex;
+  transition: all 300ms ease;
+  padding: 0;
+  border-radius: 1rem;
+  row-gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.nav {
+  display: none;
+}
+
+.nav.open {
+  display: flex;
+  width: 100%;
+}
+
+.animate-pulse {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #f3f2f4;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.banner {
+  background:
+    linear-gradient(to bottom,
+      rgba(188, 78, 156, 0) 20%,
+      rgba(188, 78, 156, 0) 100%),
+    no-repeat center/cover url("./../../public/Images/blockchain banner.png");
+}
+
+.banner:hover {
+  background:
+    linear-gradient(to bottom,
+      rgba(188, 78, 156, 0) 20%,
+      rgba(0, 0, 0, 0.712) 80%),
+    no-repeat center/cover url("./../../public/Images/blockchain banner.png");
+}
+
+.banner:hover .grid {
+  grid-template-rows: 1fr;
+}
+
+.banner:hover .grid .min-h-0 {
+  margin-bottom: 40px;
+}
+
+.hover {
+  width: fit-content;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.hover::after {
+  content: "";
+  margin: auto;
+  bottom: 0;
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: #f3f2f4;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.hover:hover::after {
+  width: 100%;
+}
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__container.opinion {
+  justify-content: space-evenly;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.embla__container.essay .embla__slide {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .embla__container.essay .embla__slide {
+    flex: 0 0 50%;
+    min-width: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .embla__container.essay .embla__slide {
+    flex: 0 0 17.5%;
+    min-width: 0;
+  }
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0px rgba(225, 225, 255, 0.7);
+  }
+
+  to {
+    box-shadow: 0 0 0 10px rgba(225, 225, 255, 0);
+  }
+}
