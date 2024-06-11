@@ -18,7 +18,7 @@ export default function Essay({
 }: Props) {
   return (
     <div
-      className={`mt-6 items-center justify-center rounded-2xl border border-gray px-7 py-6 transition-colors hover:border-[#7D6CFF] lg:flex lg:flex-col ${className ?? ""}`}
+      className={`mt-6 flex h-fit flex-col items-center justify-center rounded-2xl border border-gray px-7 py-6 transition-colors hover:border-[#7D6CFF] md:w-[329px] ${className ?? ""}`}
     >
       <Image
         src={src}

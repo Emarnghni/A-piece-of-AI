@@ -1,25 +1,22 @@
 import Image from "next/image";
 // Components
-
 import Features from "./components/features";
 import Pulse from "./components/pulse";
 import ProjectCard from "./components/projectCard";
 import TxtArow from "./components/txtArow";
-import ClientOpinion from "./components/clientOpinion";
+import ClientOpinionSlider from "./components/clientOpinionSlider";
 import ContactUs from "./components/contactUs";
 import FooterLink from "./components/footerLink";
-import Essay from "./components/essay";
-import {Slider} from "./components/slider";
 import Platforms from "./components/platforms";
 // Images
 import banner from "/public/Images/banner.png";
 import pruductLogo from "/public/Images/logo.png";
 import secondBanner from "/public/Images/second banner.png";
-import essay from "/public/Images/Essay banner.jpeg";
+import Header from "./components/header";
+import EssaySlider from "./components/essaySlider";
+import PictruesSlider from "./components/pictruesSlider";
 // SVG files
 import logo from "/public/SVG/openai.svg";
-import iranserver from "/public/SVG/iranserver.svg";
-import snap from "/public/SVG/snapp.svg";
 import arrow from "/public/SVG/Arrow.svg";
 import location from "/public/SVG/location.svg";
 import oldPhone from "/public/SVG/old phone.svg";
@@ -31,18 +28,8 @@ import linkedin from "/public/SVG/linkedin.svg";
 import github from "/public/SVG/github.svg";
 import telegram from "/public/SVG/telegram.svg";
 import x from "/public/SVG/X.svg";
-import Header from "./components/header";
+
 export default function Home() {
-  const pictures = [
-    iranserver,
-    snap,
-    iranserver,
-    snap,
-    iranserver,
-    snap,
-    iranserver,
-    snap,
-  ];
   const features = [
     {
       id: Math.random(),
@@ -124,19 +111,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div>
-            <Slider className="flex justify-between py-5 md:px-4 lg:mx-auto lg:mt-auto lg:w-[90%]">
-              <>
-                {pictures.map((item, index) => (
-                  <Image
-                    className="lg:w-[75px]"
-                    key={index}
-                    src={item}
-                    alt="company"
-                  />
-                ))}
-              </>
-            </Slider>
+          <div className="lg:mr-auto lg:w-[95%]">
+            <PictruesSlider />
           </div>
         </div>
         <div className="mx-auto flex h-screen flex-col justify-start md:py-16 lg:mx-auto lg:h-fit lg:w-[90%] lg:flex-row lg:items-center lg:gap-x-52 lg:py-20">
@@ -221,50 +197,12 @@ export default function Home() {
             </div>
           </div>
           <div className="py-4">
-            <ClientOpinion />
+            <ClientOpinionSlider />
           </div>
         </div>
         <div className="mx-auto w-[90%] px-4 py-8 lg:px-0">
           <TxtArow isPulse={true} title="تحقیقات و مقالات" />
-          <Slider className="essay justify-between px-5">
-            <>
-              <div className="embla__slide">
-                <Essay
-                  src={essay}
-                  title="با هوش مصنوعی بلاک‌چین را شکست دهید"
-                  date="۲۲ اردیبهشت ۱۴۰۳"
-                  description="با هوش مصنوعی بلاک‌چین را شکست دهید"
-                />
-              </div>
-              <div className="embla__slide">
-                <Essay
-                  src={essay}
-                  title="با هوش مصنوعی بلاک‌چین را شکست دهید"
-                  date="۲۲ اردیبهشت ۱۴۰۳"
-                  description="با هوش مصنوعی بلاک‌چین را شکست دهید"
-                  className="hidden"
-                />
-              </div>
-              <div className="embla__slide">
-                <Essay
-                  src={essay}
-                  title="با هوش مصنوعی بلاک‌چین را شکست دهید"
-                  date="۲۲ اردیبهشت ۱۴۰۳"
-                  description="با هوش مصنوعی بلاک‌چین را شکست دهید"
-                  className="hidden"
-                />
-              </div>
-              <div className="embla__slide">
-                <Essay
-                  src={essay}
-                  title="با هوش مصنوعی بلاک‌چین را شکست دهید"
-                  date="۲۲ اردیبهشت ۱۴۰۳"
-                  description="با هوش مصنوعی بلاک‌چین را شکست دهید"
-                  className="hidden"
-                />
-              </div>
-            </>
-          </Slider>
+          <EssaySlider />
         </div>
         <footer className="border-y border-gray px-4 py-8 lg:px-2">
           <div className="lg:flex lg:h-fit lg:justify-between lg:px-8">

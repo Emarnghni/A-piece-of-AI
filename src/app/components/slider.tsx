@@ -1,28 +1,43 @@
 "use client";
-import React, { ReactElement, useCallback } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+// import Swiper core and required modules
+import { Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 
+import { Swiper } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
+import { FC, ReactNode } from "react";
+import { SwiperOptions } from "swiper/types";
 interface Props {
-  children?: ReactElement;
-  className?: string;
+  children: ReactNode;
+  breakpoints: {
+    [width: number]: SwiperOptions;
+    [ratio: string]: SwiperOptions;
+  };
+  Delay?: number | undefined;
 }
-export const Slider = ({ children, className }: Props) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel();
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
-
+const Slider: FC<Props> = ({ children, breakpoints, Delay }) => {
   return (
-    <div className="embla">
-      
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className={`embla__container ${className ?? ""}`}>{children}</div>
-      </div>
-    </div>
+    <>
+      <Swiper
+        // install Swiper modules
+        modules={[Pagination, Scrollbar, A11y, Autoplay]}
+        loop={true}
+        breakpoints={breakpoints}
+        spaceBetween={10}
+        slidesPerView={1}
+        autoplay={{
+          delay: Delay,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        }}
+      >
+        {children}
+      </Swiper>
+    </>
   );
 };
+export default Slider;
