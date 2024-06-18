@@ -13,7 +13,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: #f3f2f4;
 }
 
 .wrapper.open {
@@ -52,7 +51,7 @@
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  background: #f3f2f4;
+  background: #7C7C7C;
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
@@ -95,7 +94,7 @@
   position: absolute;
   height: 2px;
   width: 0;
-  background-color: #f3f2f4;
+  background-color: #1e1e1e;
   transition: width 0.3s cubic-bezier(0.4, 0, 0.6, 1);
 }
 
@@ -103,49 +102,12 @@
   width: 100%;
 }
 
-.embla {
-  overflow: hidden;
-}
-
-.embla__container {
-  display: flex;
-}
-
-.embla__container.opinion {
-  justify-content: space-evenly;
-}
-
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-}
-
-.embla__container.essay .embla__slide {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-@media (min-width: 768px) {
-  .embla__container.essay .embla__slide {
-    flex: 0 0 50%;
-    min-width: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .embla__container.essay .embla__slide {
-    flex: 0 0 17.5%;
-    min-width: 0;
-  }
-}
-
 @keyframes pulse {
   from {
-    box-shadow: 0 0 0 0px rgba(225, 225, 255, 0.7);
+    box-shadow: 0 0 0 0px rgb(124, 124, 124);
   }
 
   to {
-    box-shadow: 0 0 0 10px rgba(225, 225, 255, 0);
+    box-shadow: 0 0 0 10px rgba(124, 124, 124, 0);
   }
 }

@@ -8,7 +8,7 @@ export default function TxtArow({ title, isPulse }: Props) {
     <div className="flex justify-between">
       <div className={`${isPulse ? "flex items-center gap-x-4" : ""}`}>
         {isPulse ? <Pulse className="hidden lg:block" /> : <></>}
-        <p className="text-sm text-white lg:text-lg">{title}</p>
+        <p className="text-sm text-black dark:text-white lg:text-lg">{title}</p>
       </div>
     </div>
   );

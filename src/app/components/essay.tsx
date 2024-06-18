@@ -26,14 +26,14 @@ export default function Essay({
         className="h-[210px] w-[270px] rounded-2xl object-cover"
       />
       <div className="mt-11 flex flex-col">
-        <div className="text-white">
+        <div className="text-black dark:text-white">
           <p className="text-sm">{title}</p>
         </div>
-        <div className="mb-9 mt-6 text-gray">
+        <div className="mb-9 mt-6 text-black dark:text-gray">
           <p className="text-xs">{date}</p>
           <p className="text-xs">{description}</p>
         </div>
-        <div className="text-gray">
+        <div className="text-black dark:text-gray">
           <Link href="#" src={arrow} title="به خواندن ادامه دهید" />
         </div>
       </div>
