@@ -16,7 +16,7 @@ export default function ToggleDarkMode() {
   return (
     <button
       onClick={() => setLightMode(!lightMode)}
-      className="flex items-center justify-between gap-x-5 rounded-lg border border-accsent bg-white px-2 py-[10px] text-xs font-semibold text-black dark:border-none dark:bg-accsent dark:text-gray lg:w-full"
+      className="flex items-center justify-between gap-x-5 rounded-lg border border-accsent bg-white p-[10px] text-xs font-semibold text-black dark:border-none dark:bg-accsent dark:text-gray"
     >
       {lightMode ? (
         <Image src={sun} alt="sun for light mode" />

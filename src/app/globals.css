@@ -25,7 +25,6 @@
 }
 
 .expandable {
-  background-color: #18151F;
   min-height: 0;
   display: flex;
   transition: all 300ms ease;
