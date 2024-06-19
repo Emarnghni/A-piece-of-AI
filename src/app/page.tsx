@@ -90,9 +90,9 @@ export default function Home() {
   return (
     <>
       <div className="w-full bg-white dark:bg-black">
-        <div className="flex h-screen flex-col justify-between pb-6">
+        <div className="flex h-screen flex-col justify-start pb-6">
           <Header />
-          <div className="mr-auto flex flex-col lg:w-[95%]">
+          <div className="my-auto mr-auto flex flex-col lg:w-[95%]">
             <div className="lg:flex">
               <div className="px-4 lg:flex lg:flex-col lg:justify-center lg:px-0">
                 <p className="mt-9 text-base text-black dark:text-white md:text-2xl lg:text-4xl">

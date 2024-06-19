@@ -13,7 +13,7 @@ export default function Header() {
       >
         <div className=" flex items-center justify-between py-6 lg:w-full">
           <div className={`z-20 flex w-[20%] items-center`}>
-            <Image className="w-2/5" src={logo} alt="logo" />
+            <Image className="lg:w-2/5" src={logo} alt="logo" />
             {/* <h1 className="mr-3 text-nowrap text-black dark:text-white md:text-base">
               A piece of AI
             </h1> */}
