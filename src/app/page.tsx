@@ -33,56 +33,23 @@ import telegram from "/public/SVG/telegram.svg";
 import x from "/public/SVG/X.svg";
 
 export default function Home() {
-  const features = [
-    {
-      id: Math.random(),
-      src: pruductLogo,
-      title: " فراگیر کردن صنعت هوش مصنوعی",
-      description:
-        "ما در A PIECE OF AI در تلاش هستیم تا با ایجاد و تسهیل بخشیدن به تولید محصولاتی در حوزه هوش مصنوعی به فراگیر شدنش در صنعت کمک کنیم و بتوانیم با استفاده از آن زندگی مردم ، صاحبان کسب و کار و ... را بهبود ببخشیم",
-    },
-    {
-      id: Math.random(),
-      src: pruductLogo,
-      title: "لورم ایپسوم",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.",
-    },
-    {
-      id: Math.random(),
-      src: pruductLogo,
-      title: "لورم ایپسوم",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.",
-    },
-    {
-      id: Math.random(),
-      src: pruductLogo,
-      title: "لورم ایپسوم",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.",
-    },
-  ];
   const project = [
     {
       id: 1,
-      title: "با هوش مصنوعی بلاک‌چین را شکست دهید",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.",
+      title: "پروژه به زودی .. ",
+      description: "به زودی",
       href: "#",
     },
     {
       id: 2,
-      title: "با هوش مصنوعی بلاک‌چین را شکست دهید",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.",
+      title: "پروژه به زودی .. ",
+      description: "به زودی",
       href: "#",
     },
     {
       id: 3,
-      title: "با هوش مصنوعی بلاک‌چین را شکست دهید",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.",
+      title: "پروژه به زودی .. ",
+      description: "به زودی",
       href: "#",
     },
   ];
@@ -146,15 +113,12 @@ export default function Home() {
             <h3 className="mt-8 text-base text-black dark:text-white lg:text-2xl">
               اهداف تیم A PIECE OF AI
             </h3>
-            <div className="space-y-8 px-4  md:grid md:grid-cols-2 md:gap-x-20 md:gap-y-8 md:space-y-0 lg:gap-[120px]">
-              {features.map((item) => (
-                <Features
-                  src={item.src}
-                  key={item.id}
-                  title={item.title}
-                  description={item.description}
-                />
-              ))}
+            <div className="px-4 md:flex md:items-center">
+              <Features
+                src={pruductLogo}
+                title=" فراگیر کردن صنعت هوش مصنوعی"
+                description="ما در A PIECE OF AI در تلاش هستیم تا با ایجاد و تسهیل بخشیدن به تولید محصولاتی در حوزه هوش مصنوعی به فراگیر شدنش در صنعت کمک کنیم و بتوانیم با استفاده از آن زندگی مردم ، صاحبان کسب و کار و ... را بهبود ببخشیم"
+              />
             </div>
           </div>
         </div>
@@ -168,8 +132,7 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-center text-xs font-normal text-black dark:text-white md:text-sm">
-                شما می‌توانید متناسب با صنعت و اندازه شرکت خود یکی از راهکارهای
-                ابری آروان را به کار گیرید.
+                به زودی...
               </p>
             </div>
             <div className="mt-5 flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-x-4 lg:mt-0 lg:flex lg:w-3/5 lg:flex-row lg:gap-x-5">
